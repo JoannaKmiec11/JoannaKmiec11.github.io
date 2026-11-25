@@ -1,0 +1,133 @@
+/* Shared base + components. Links after tokens.css, before each site's own stylesheet. */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font);
+  color: var(--ink-strong);
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  font-weight: 800;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+a { color: var(--teal-600); }
+a:hover { color: var(--teal); }
+
+img { max-width: 100%; display: block; }
+
+/* Layout */
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.wrap.narrow { max-width: 780px; }
+
+/* Kicker: the teal caps line from the slide system */
+.kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-600);
+  margin: 0 0 14px;
+}
+
+/* Skip link */
+.skip { position: absolute; left: -999px; }
+.skip:focus {
+  left: 16px; top: 12px;
+  background: var(--navy); color: #fff;
+  padding: 8px 14px; border-radius: 8px; z-index: 20;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--navy); color: #fff; box-shadow: var(--shadow-sm); }
+.btn.primary:hover { background: var(--navy-700); box-shadow: var(--shadow); color: #fff; }
+.btn.teal { background: var(--teal); color: var(--navy); }
+.btn.teal:hover { background: var(--teal-600); color: var(--navy); }
+.btn.ghost { background: transparent; color: var(--ink-strong); border-color: var(--rule); }
+.btn.ghost:hover { border-color: var(--teal); color: var(--teal-600); }
+
+/* Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Teal number / icon circle motif from the slides */
+.circle {
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--teal-tint);
+  color: var(--teal-600);
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex: none;
+}
+
+/* Image placeholder helper */
+.ph {
+  position: relative;
+  width: 100%;
+  background:
+    repeating-linear-gradient(135deg, var(--bg-2), var(--bg-2) 10px, var(--card) 10px, var(--card) 20px);
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  min-height: 160px;
+  overflow: hidden;
+}
+.ph[data-ratio="16x9"] { aspect-ratio: 16 / 9; min-height: 0; }
+.ph[data-ratio="4x3"] { aspect-ratio: 4 / 3; min-height: 0; }
+.ph[data-ratio="1x1"] { aspect-ratio: 1 / 1; min-height: 0; }
+.ph span {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+}
+/* When a real image is dropped in, it fills the frame */
+.ph > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}

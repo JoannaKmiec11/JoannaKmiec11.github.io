@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <filter id="card" x="-6%" y="-10%" width="112%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#14213D" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#14213D"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2EC4B6"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" fill="#F7F9FB"/>
+
+  <!-- header -->
+  <text x="60" y="56" fill="#2EC4B6" font-size="17" font-weight="700" letter-spacing="2">EVIDENCE</text>
+  <text x="60" y="90" fill="#14213D" font-size="30" font-weight="700">One pattern from three sources</text>
+
+  <!-- connector lines (drawn first, behind cards) -->
+  <path d="M400 213 C 480 213, 480 337, 528 337" fill="none" stroke="#2EC4B6" stroke-width="2.5"/>
+  <path d="M400 337 L528 337" fill="none" stroke="#2EC4B6" stroke-width="2.5"/>
+  <path d="M400 461 C 480 461, 480 337, 528 337" fill="none" stroke="#2EC4B6" stroke-width="2.5"/>
+
+  <!-- source card 1: Intercom -->
+  <g filter="url(#card)">
+    <rect x="60" y="150" width="340" height="126" rx="14" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1"/>
+  </g>
+  <circle cx="92" cy="186" r="7" fill="#14213D"/>
+  <text x="112" y="192" fill="#14213D" font-size="21" font-weight="700">Intercom</text>
+  <text x="84" y="226" fill="#4A5568" font-size="16">Support tagged every speed complaint,</text>
+  <text x="84" y="250" fill="#4A5568" font-size="16">building structured evidence over time.</text>
+
+  <!-- source card 2: Productboard -->
+  <g filter="url(#card)">
+    <rect x="60" y="274" width="340" height="126" rx="14" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1"/>
+  </g>
+  <circle cx="92" cy="310" r="7" fill="#2EC4B6"/>
+  <text x="112" y="316" fill="#14213D" font-size="21" font-weight="700">Productboard</text>
+  <text x="84" y="350" fill="#4A5568" font-size="16">Each insight carried a customer name,</text>
+  <text x="84" y="374" fill="#4A5568" font-size="16">a school and a direct quote.</text>
+
+  <!-- source card 3: Hotjar -->
+  <g filter="url(#card)">
+    <rect x="60" y="398" width="340" height="126" rx="14" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1"/>
+  </g>
+  <circle cx="92" cy="434" r="7" fill="#E8846B"/>
+  <text x="112" y="440" fill="#14213D" font-size="21" font-weight="700">Hotjar</text>
+  <text x="84" y="474" fill="#4A5568" font-size="16">Session recordings showed what slow</text>
+  <text x="84" y="498" fill="#4A5568" font-size="16">speed did to real use.</text>
+
+  <!-- central node: grouped into themes -->
+  <g filter="url(#card)">
+    <rect x="528" y="222" width="276" height="230" rx="16" fill="#14213D"/>
+  </g>
+  <text x="666" y="272" fill="#FFFFFF" font-size="24" font-weight="700" text-anchor="middle">Grouped into themes</text>
+  <g font-size="17" font-weight="600">
+    <rect x="551" y="298" width="230" height="38" rx="19" fill="#2EC4B6"/>
+    <text x="666" y="323" fill="#14213D" text-anchor="middle">Tracker loading</text>
+    <rect x="551" y="346" width="230" height="38" rx="19" fill="#D5F3F0"/>
+    <text x="666" y="371" fill="#14213D" text-anchor="middle">Mark entry delay</text>
+    <rect x="551" y="394" width="230" height="38" rx="19" fill="#D5F3F0"/>
+    <text x="666" y="419" fill="#14213D" text-anchor="middle">Value calculations</text>
+  </g>
+
+  <!-- arrow to outcome -->
+  <path d="M806 337 L852 337" fill="none" stroke="#2EC4B6" stroke-width="3" marker-end="url(#arrowTeal)"/>
+
+  <!-- outcome panel -->
+  <g filter="url(#card)">
+    <rect x="862" y="196" width="278" height="282" rx="14" fill="#FFFFFF" stroke="#E1E7EF" stroke-width="1"/>
+  </g>
+  <text x="1001" y="246" fill="#5A6478" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">THE FOUNDER BACKED IT</text>
+
+  <text x="1001" y="312" fill="#14213D" font-size="30" font-weight="700" text-anchor="middle">3 to 5 a day</text>
+  <text x="1001" y="362" fill="#2EC4B6" font-size="34" font-weight="800" text-anchor="middle">2 to 3 a week</text>
+
+  <text x="1001" y="424" fill="#4A5568" font-size="15" text-anchor="middle">Performance support contacts,</text>
+  <text x="1001" y="446" fill="#4A5568" font-size="15" text-anchor="middle">after targeted fixes shipped.</text>
+</svg>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-assisted release notes — Joanna Kmiec</title>
+<meta name="description" content="How I built and constrained a custom GPT that cut internal release note drafting from an hour to under 30 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/base.css">
+<link rel="stylesheet" href="../portfolio.css">
+</head>
+<body>
+
+<a class="skip" href="#start">Skip to content</a>
+
+<header class="cs-hero">
+  <div class="cs-wrap">
+    <a class="cs-back" href="../index.html">&larr; All work</a>
+    <span class="kicker">Case study · AI in practice</span>
+    <h1>A custom GPT that earned its place</h1>
+    <div class="cs-meta">
+      <span>Role: <b>Product Manager, Pupil Progress</b></span>
+      <span>Skills: <b>AI tool design, constraint-setting, workflow automation</b></span>
+    </div>
+  </div>
+</header>
+
+<main id="start">
+
+  <figure class="cs-figure">
+    <div class="ph" data-ratio="16x9"><img src="../assets/ai-release-notes-flow.svg" alt="Jira tickets flowing into a constrained custom GPT, then out as a grouped internal release notes email, cutting drafting from about an hour to under 30 minutes per release"></div>
+    <figcaption>The workflow: tickets into a constrained GPT, out as a grouped internal email, with me reviewing every draft.</figcaption>
+  </figure>
+
+  <div class="cs-wrap">
+
+    <section class="cs-section">
+      <h2><span class="n">01</span>The problem</h2>
+      <p>The development team shipped improvements regularly, but Support, Success and Onboarding kept saying they did not feel fully aware of what was being delivered or when. That left them unprepared for customer questions. Writing release notes by hand for every release was slow, inconsistent, and competed directly with higher-value product work.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">02</span>The decision</h2>
+      <p>I used AI for a specific reason, not because it was available. The task had a clear structure and a repeatable template, so a model could handle the mechanical formatting while I kept ownership of accuracy and tone.</p>
+      <p>I built a custom GPT trained on a release-notes template I wrote, clear language guidelines, and good examples of previous notes. It was constrained to format and group existing information, not to generate ideas, which is what kept hallucination out of it.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">03</span>How it worked</h2>
+      <ul>
+        <li>Collect the Jira tickets for a release, each already written with context, user journeys, acceptance criteria and a test plan.</li>
+        <li>Feed the tickets into the GPT.</li>
+        <li>It drafts notes grouped into new features, improvements, bugs and affected teams.</li>
+        <li>I review every draft for accuracy before anything is shared internally.</li>
+      </ul>
+      <p>It was never a source of truth, always reviewed first. Identifying affected teams was the unreliable part and needed manual correction, and edge cases not spelled out in tickets were missed. The workflow later moved onto Jira AI as the tooling matured, but the template and constraints I set up at the start stayed the foundation.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">04</span>The outcome</h2>
+      <div class="cs-stat">
+        <span class="big">About an hour <b>to under 30 minutes</b></span>
+        <span class="cap">Time per release, at two releases a week at peak, so the saving compounded.</span>
+      </div>
+      <p>Support and Success consistently said they felt more informed. They bookmarked the release note emails as a reference and could explain new features to customers straight away, without coming back with follow-up questions.</p>
+    </section>
+
+    <div class="takeaway">
+      <h3>What would not have happened without me</h3>
+      <p>The saving did not come from the model. It came from the template, the constraints and the review step I designed around it. Point the same tool at messy inputs with no guardrails and you get faster nonsense.</p>
+    </div>
+
+    <section class="cs-section">
+      <h2><span class="n">05</span>Why it matters</h2>
+      <p>This is the mental model I bring to AI in product work: constrain it, give it good inputs, and stay in the loop. It is not about replacing judgement. It is about removing the mechanical parts of structured tasks.</p>
+      <p><strong>Transferable skill:</strong> workflow automation judgement, knowing when AI is the right tool, how to constrain it, and how to measure whether it actually worked.</p>
+    </section>
+
+  </div>
+
+</main>
+
+<nav class="cs-nav" aria-label="More work">
+  <div class="wrap">
+    <a href="platform-performance.html">&larr; Platform performance</a>
+    <a href="../index.html">All work &rarr;</a>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning Characteristics — Joanna Kmiec</title>
+<meta name="description" content="How I prototyped the expensive build, proved it was the wrong investment, and shipped a simpler fix in a week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/base.css">
+<link rel="stylesheet" href="../portfolio.css">
+</head>
+<body>
+
+<a class="skip" href="#start">Skip to content</a>
+
+<header class="cs-hero">
+  <div class="cs-wrap">
+    <a class="cs-back" href="../index.html">&larr; All work</a>
+    <span class="kicker">Case study · Product decision</span>
+    <h1>Prototyping my way out of the expensive build</h1>
+    <div class="cs-meta">
+      <span>Role: <b>Product Manager, Pupil Progress</b></span>
+      <span>Skills: <b>Problem framing, prototype testing, scope discipline</b></span>
+    </div>
+  </div>
+</header>
+
+<main id="start">
+
+  <figure class="cs-figure">
+    <div class="ph" data-ratio="16x9"><img src="../assets/learning-characteristics.gif" alt="Pupil Progress Live Tracking, showing Learning Characteristics scored alongside unit marks and grades"></div>
+    <figcaption>Learning Characteristics scored per pupil in the Live Tracking view, next to unit marks and grades.</figcaption>
+  </figure>
+
+  <div class="cs-wrap">
+
+    <section class="cs-section">
+      <h2><span class="n">01</span>The problem</h2>
+      <p>Teachers used the Pupil Progress platform to view students, assessments and Learning Characteristics per subject and academic year. They could enter Learning Characteristic values, but those values were overwritten continuously. There was no way to capture a point-in-time view or compare progress across review points during the year.</p>
+      <p>Schools wanted to enter and review these values multiple times across the year, not just overwrite a single running number.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">02</span>The evidence</h2>
+      <ul>
+        <li>Productboard insights, each logged with a direct customer comment, the customer's name and their school, so I could see which types of school were most affected and follow up directly.</li>
+        <li>The same request arriving from multiple schools independently, which pointed to a genuine workflow gap rather than a one-off edge case.</li>
+        <li>Support and Success hearing the request consistently and flagging it as a blocker for some customers.</li>
+      </ul>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">03</span>The decision</h2>
+      <p>The team believed the answer was a bespoke review-point feature. Before committing to that, I weighed it against expanding a workflow users already knew.</p>
+      <table class="cs-table">
+        <thead><tr><th>Option</th><th>Pros</th><th>Cons</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Bespoke review-point feature</td>
+            <td>Tailored to the exact request</td>
+            <td>Longer to build, more expensive, added platform complexity</td>
+          </tr>
+          <tr class="chosen">
+            <td>Expand the existing snapshots workflow</td>
+            <td>Faster, familiar to users, reuses existing patterns</td>
+            <td>Less bespoke</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>I ran prototype testing on the more expensive bespoke option first, because that was where the team's conviction was. Testing exposed that the core need, a side-by-side comparison of live data against a point-in-time snapshot, was already solvable with the snapshots workflow we had.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">04</span>What I did</h2>
+      <p>I said no to the bespoke build and delivered the simpler solution: teachers could compare live Learning Characteristic and TPG values against snapshots, side by side, on the live tracker view. Same user outcome, far less to build and maintain.</p>
+    </section>
+
+    <section class="cs-section">
+      <h2><span class="n">05</span>The outcome</h2>
+      <div class="cs-stat">
+        <span class="big">Over a month <b>to one week</b></span>
+        <span class="cap">Choosing the existing workflow over the bespoke build cut delivery time, while still meeting the core need.</span>
+      </div>
+      <p>The feature was adopted by most active schools shortly after launch, and Support noted it was picked up quickly with minimal friction. I avoided creating a separate new workflow and the platform complexity that would have come with it.</p>
+    </section>
+
+    <div class="takeaway">
+      <h3>What would not have happened without me</h3>
+      <p>The team would have built the expensive feature. The prototype is what turned conviction into evidence, and the evidence is what justified the simpler, cheaper decision.</p>
+    </div>
+
+    <section class="cs-section">
+      <h2><span class="n">06</span>What I'd do differently</h2>
+      <p>I would validate the underlying problem with users before framing it as a new feature. The prototype was useful because it exposed the simpler path, but better discovery questions earlier would have got there faster, without the detour through the expensive option.</p>
+      <p><strong>Transferable skill:</strong> delivery decision-making under scope pressure, choosing the faster, lower-risk path without compromising the user outcome.</p>
+    </section>
+
+  </div>
+
+</main>
+
+<nav class="cs-nav" aria-label="More work">
+  <div class="wrap">
+    <a href="../index.html">&larr; All work</a>
+    <a href="platform-performance.html">Next: platform performance &rarr;</a>
+  </div>
+</nav>
+
+</body>
+</html>

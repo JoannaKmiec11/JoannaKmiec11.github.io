@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <filter id="card" x="-6%" y="-10%" width="112%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#14213D" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2EC4B6"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" fill="#F7F9FB"/>
+
+  <!-- header -->
+  <text x="60" y="52" fill="#2EC4B6" font-size="17" font-weight="700" letter-spacing="2">AI IN PRACTICE</text>
+  <text x="60" y="86" fill="#14213D" font-size="30" font-weight="700">From Jira tickets to a release email</text>
+
+  <!-- column labels -->
+  <text x="60" y="140" fill="#5A6478" font-size="13" font-weight="700" letter-spacing="1.5">JIRA TICKETS</text>
+  <text x="784" y="140" fill="#5A6478" font-size="13" font-weight="700" letter-spacing="1.5">INTERNAL EMAIL</text>
+
+  <!-- connectors behind cards -->
+  <path d="M360 206 C 420 206, 420 338, 450 338" fill="none" stroke="#2EC4B6" stroke-width="2.5"/>
+  <path d="M360 316 C 420 316, 420 338, 450 338" fill="none" stroke="#2EC4B6" stroke-width="2.5"/>
+  <path d="M360 426 C 420 426, 420 338, 450 338" fill="none" stroke="#2EC4B6" stroke-width="2.5"/>
+  <path d="M700 338 L772 338" fill="none" stroke="#2EC4B6" stroke-width="3" marker-end="url(#arrowTeal)"/>
+
+  <!-- ticket card 1 -->
+  <g filter="url(#card)"><rect x="60" y="158" width="300" height="96" rx="12" fill="#FFFFFF" stroke="#E1E7EF"/></g>
+  <rect x="74" y="176" width="5" height="60" rx="2.5" fill="#14213D"/>
+  <text x="92" y="192" fill="#14213D" font-size="16" font-weight="700">PP-482</text>
+  <text x="92" y="216" fill="#4A5568" font-size="15">Bulk edit performance</text>
+  <text x="92" y="238" fill="#5A6478" font-size="12.5">Context · acceptance criteria · test plan</text>
+
+  <!-- ticket card 2 -->
+  <g filter="url(#card)"><rect x="60" y="268" width="300" height="96" rx="12" fill="#FFFFFF" stroke="#E1E7EF"/></g>
+  <rect x="74" y="286" width="5" height="60" rx="2.5" fill="#14213D"/>
+  <text x="92" y="302" fill="#14213D" font-size="16" font-weight="700">PP-477</text>
+  <text x="92" y="326" fill="#4A5568" font-size="15">Skeleton loading states</text>
+  <text x="92" y="348" fill="#5A6478" font-size="12.5">Context · acceptance criteria · test plan</text>
+
+  <!-- ticket card 3 -->
+  <g filter="url(#card)"><rect x="60" y="378" width="300" height="96" rx="12" fill="#FFFFFF" stroke="#E1E7EF"/></g>
+  <rect x="74" y="396" width="5" height="60" rx="2.5" fill="#14213D"/>
+  <text x="92" y="412" fill="#14213D" font-size="16" font-weight="700">PP-471</text>
+  <text x="92" y="436" fill="#4A5568" font-size="15">Connectivity messaging</text>
+  <text x="92" y="458" fill="#5A6478" font-size="12.5">Context · acceptance criteria · test plan</text>
+
+  <!-- central node: custom GPT -->
+  <g filter="url(#card)"><rect x="450" y="233" width="250" height="210" rx="16" fill="#14213D"/></g>
+  <text x="575" y="282" fill="#FFFFFF" font-size="22" font-weight="700" text-anchor="middle">Custom GPT</text>
+  <g font-size="15" font-weight="600">
+    <rect x="470" y="300" width="210" height="36" rx="18" fill="#2EC4B6"/>
+    <text x="575" y="324" fill="#14213D" text-anchor="middle">Uses my template</text>
+    <rect x="470" y="344" width="210" height="36" rx="18" fill="#D5F3F0"/>
+    <text x="575" y="368" fill="#14213D" text-anchor="middle">Groups, never invents</text>
+    <rect x="470" y="388" width="210" height="36" rx="18" fill="#D5F3F0"/>
+    <text x="575" y="412" fill="#14213D" text-anchor="middle">I review every draft</text>
+  </g>
+
+  <!-- email card -->
+  <g filter="url(#card)"><rect x="780" y="180" width="360" height="320" rx="16" fill="#FFFFFF" stroke="#E1E7EF"/></g>
+  <text x="806" y="214" fill="#5A6478" font-size="13">To: Support · Success · Onboarding</text>
+  <line x1="806" y1="230" x2="1114" y2="230" stroke="#E1E7EF" stroke-width="1"/>
+  <text x="806" y="262" fill="#14213D" font-size="19" font-weight="700">Subject: Release notes</text>
+  <line x1="806" y1="280" x2="1114" y2="280" stroke="#E1E7EF" stroke-width="1"/>
+
+  <!-- grouped sections -->
+  <circle cx="814" cy="312" r="6" fill="#2EC4B6"/>
+  <text x="832" y="318" fill="#14213D" font-size="16" font-weight="700">New features</text>
+  <line x1="832" y1="334" x2="1096" y2="334" stroke="#EDF1F6" stroke-width="6" stroke-linecap="round"/>
+
+  <circle cx="814" cy="358" r="6" fill="#14213D"/>
+  <text x="832" y="364" fill="#14213D" font-size="16" font-weight="700">Improvements</text>
+  <line x1="832" y1="380" x2="1096" y2="380" stroke="#EDF1F6" stroke-width="6" stroke-linecap="round"/>
+
+  <circle cx="814" cy="404" r="6" fill="#E8846B"/>
+  <text x="832" y="410" fill="#14213D" font-size="16" font-weight="700">Bug fixes</text>
+  <line x1="832" y1="426" x2="1096" y2="426" stroke="#EDF1F6" stroke-width="6" stroke-linecap="round"/>
+
+  <circle cx="814" cy="450" r="6" fill="#5A6478"/>
+  <text x="832" y="456" fill="#14213D" font-size="16" font-weight="700">Affected teams</text>
+  <line x1="832" y1="472" x2="1096" y2="472" stroke="#EDF1F6" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- outcome band -->
+  <rect x="60" y="528" width="1080" height="96" rx="16" fill="#2EC4B6"/>
+  <text x="600" y="568" fill="#14213D" font-size="25" font-weight="800" text-anchor="middle">About an hour to under 30 minutes per release</text>
+  <text x="600" y="598" fill="#14213D" font-size="15" font-weight="600" text-anchor="middle">At two releases a week, so the saving compounded. Never a source of truth, always reviewed first.</text>
+</svg>
