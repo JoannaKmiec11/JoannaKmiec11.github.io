@@ -74,7 +74,7 @@
 .work-more { margin-top: 4px; color: var(--teal-600); font-weight: 700; font-size: 0.95rem; }
 
 /* ---------- AI tools ---------- */
-.tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .tool { padding: 22px; display: flex; flex-direction: column; gap: 10px; }
 .tool-head { display: flex; align-items: center; gap: 12px; }
 .tool-logo { width: 34px; height: 34px; object-fit: contain; border-radius: 7px; background: #fff; padding: 3px; border: 1px solid var(--rule); }
