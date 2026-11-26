@@ -140,6 +140,8 @@
 .ai-note { margin-top: 26px; color: var(--muted); font-size: 0.95rem; }
 .ai-grid.two { grid-template-columns: repeat(2, 1fr); }
 .ai-shots { display: flex; flex-direction: column; }
+/* CycleBrief's single screenshot matches the two stacked shots on the workflow card (160px each + 1px divider) so both headings line up */
+.ai-grid.two > .ai-card > .ph { min-height: 321px; }
 
 /* ---------- Background / credibility ---------- */
 .cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
