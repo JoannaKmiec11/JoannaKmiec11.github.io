@@ -100,6 +100,7 @@
 .tool-feature p { color: var(--on-navy); font-size: 1.06rem; max-width: 72ch; margin: 0; }
 .tool-feature-cta { display: inline-block; margin-top: 18px; color: var(--teal); font-weight: 700; font-size: 1rem; }
 .tool-feature:hover .tool-feature-cta { color: #fff; }
+.tool-shot { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--rule); border-radius: var(--radius); margin-bottom: 6px; background: var(--bg-2); }
 
 /* ---------- Beyond the day job (passion project) ---------- */
 .passion-card {
@@ -137,6 +138,8 @@
 .ai-body h3 { font-size: 1.15rem; }
 .ai-body p { color: var(--muted); font-size: 0.95rem; }
 .ai-note { margin-top: 26px; color: var(--muted); font-size: 0.95rem; }
+.ai-grid.two { grid-template-columns: repeat(2, 1fr); }
+.ai-shots { display: flex; flex-direction: column; }
 
 /* ---------- Background / credibility ---------- */
 .cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -227,7 +230,7 @@
   .passion-media { padding: 32px; }
   .passion-body { padding: 28px 26px 30px; }
   .tools-grid { grid-template-columns: repeat(2, 1fr); }
-  .ai-grid { grid-template-columns: 1fr; }
+  .ai-grid, .ai-grid.two { grid-template-columns: 1fr; }
   .cred-grid { grid-template-columns: 1fr; gap: 28px; }
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
   .proof .wrap { grid-template-columns: repeat(2, 1fr); }
