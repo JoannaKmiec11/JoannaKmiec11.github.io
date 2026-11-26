@@ -168,6 +168,52 @@
 .p-foot { border-top: 1px solid var(--rule); padding: 24px 0; background: var(--bg); }
 .p-foot .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; color: var(--muted); font-size: 0.9rem; }
 
+/* ---------- How I work across tools (journeys) ---------- */
+.journeys { display: grid; gap: 20px; }
+.journey {
+  background: var(--card); border: 1px solid var(--rule);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  padding: 22px 24px 24px;
+}
+.journey-title { font-size: 1.15rem; color: var(--ink-strong); margin: 0 0 18px; }
+.journey-flow {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px 4px;
+}
+.journey-step {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  width: 104px; gap: 7px;
+}
+.journey-arrow {
+  align-self: flex-start; margin-top: 12px;
+  color: var(--teal-600); font-weight: 700; font-size: 1.1rem; line-height: 1;
+}
+.journey-logo {
+  width: 44px; height: 44px; display: grid; place-items: center;
+  background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 5px;
+}
+.journey-logo img { width: 100%; height: 100%; object-fit: contain; }
+.journey-logo.is-text {
+  font-weight: 800; font-size: 0.64rem; letter-spacing: 0.01em;
+  color: var(--navy); line-height: 1.05; padding: 4px; text-align: center;
+}
+.journey-stage { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-600); }
+.journey-tool { font-size: 0.82rem; font-weight: 600; color: var(--ink-strong); line-height: 1.2; }
+.journey-note { margin: 16px 0 0; font-size: 0.9rem; color: var(--muted); max-width: 72ch; }
+
+/* Language models strip */
+.models-strip { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--rule); }
+.models-strip h3 { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+.models-row { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.model-chip {
+  display: flex; align-items: center; gap: 9px;
+  background: var(--card); border: 1px solid var(--rule); border-radius: var(--radius-pill);
+  padding: 7px 16px 7px 8px;
+}
+.model-chip .journey-logo { width: 30px; height: 30px; border-radius: 8px; padding: 3px; }
+.model-chip .journey-logo.is-text { font-size: 0.6rem; }
+.model-chip span { font-size: 0.9rem; font-weight: 600; color: var(--ink-strong); }
+
 /* ==========================================================
    CASE STUDY PAGES
    ========================================================== */
@@ -240,4 +286,6 @@
   .p-nav { gap: 14px; }
   .p-nav a:not(.nav-cta) { display: none; }
   .tools-grid { grid-template-columns: 1fr; }
+  .journey-step { width: 86px; }
+  .journey-tool { font-size: 0.78rem; }
 }
